@@ -70,7 +70,7 @@ Le programme détectera automatiquement les bibliothèques requises par le code 
 Exemple de `LDFLAGS` :
 
 ```bash
-`sdl-config --libs` `fltk-config --ldflags`
+sdl-config --libs fltk-config --ldflags
 ```
 
 ### Explication de quelques options
