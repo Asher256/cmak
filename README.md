@@ -1,8 +1,8 @@
 # cmak, générateur de Makefile C/C++
 
-**Auteur :** Asher256
-**URL :** https://github.com/Asher256/cmak
-**Contact :** https://github.com/Asher256/cmak/issues
+- **Auteur :** Asher256
+- **URL :** https://github.com/Asher256/cmak
+- **Contact :** https://github.com/Asher256/cmak/issues
 
 # Licence
 
