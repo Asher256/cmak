@@ -1,0 +1,54 @@
+#----------------------------------------------------------------------------
+# 
+# Emplacement du fichier:
+# -----------------------
+# Dans le cas d'un système UNIX (par exemple Linux ou MaxOSX) ce fichier 
+# doit être mis en général dans : "/etc/cmak.cfg"
+# (il est aussi possible de le mettre dans $HOME/.cmak.cfg)
+# 
+# Dans un système de type Windows, ce fichier doit être mis dans
+# c:\cmak.cfg
+#
+# ***********************************************
+# Pour activer la détection automatique dans
+# cmak, il faut ajouter l'option: --detect-lib
+# ***********************************************
+#
+# NB: Pour voir un exemple de fichier cfg, lisez le fichier
+#     "/usr/share/cmak/cmak.cfg".
+#
+#----------------------------------------------------------------------------
+# Auteur: Asher256
+# Email:  contact@asher256.com
+#----------------------------------------------------------------------------
+
+# Gcc en général
+ifdef gcc
+
+	# gcc dans un système de type unix en général (Linux, MacOSX, FreeBSD...)
+	ifdef unix
+		# contenu
+	endif
+
+	# gcc sous linux
+	ifdef linux
+		#contenu
+	endif
+
+	# gcc sous freebsd
+	ifdef freebsd
+		#contenu
+	endif
+
+	# gcc dans un système darwin
+	ifdef darwin
+		# contenu
+	endif
+
+	# gcc dans un système de type windows
+	ifdef windows
+		# contenu
+	endif
+
+endif # end if gcc
+

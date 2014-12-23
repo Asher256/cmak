@@ -1,0 +1,107 @@
+#----------------------------------------------------------------------------
+#
+# ATTENTION: Il ne faut pas modifier ce fichier ! Il est préférable
+#            de modifier votre fichier cmak.cfg dans "$HOME/.cmak.cfg"
+#            ou encore dans "/etc/cmak.cfg".
+#            (lisez "L'emplacement de ce fichier" en bas, dans ce 
+#            commentaire)
+#
+# cmak.cfg contient la liste des correspondances entre les headers et
+# les CFLAGS et LDFLAGS.
+#
+# CONTRIBUTIONS:
+# --------------
+# cmak.cfg est cours de développement. J'invite toute personne
+# à y contribuer. Envoyez moi vos modification.
+#
+# ***********************************************
+# Pour activer la détection automatique dans
+# cmak, il faut ajouter l'option: --detect-lib
+# ***********************************************
+#
+# L'emplacement de ce fichier:
+# ----------------------------
+# Dans le cas d'un système UNIX (par exemple Linux ou MaxOSX), ce fichier 
+# doit être mis en général dans "/usr/share/cmak/cmak.cfg".
+# 
+# Dans un système de type Windows, ce fichier doit être mis dans
+# c:\cmak.cfg
+#
+#----------------------------------------------------------------------------
+# Auteur: Asher256
+# Email:  contact@asher256.com
+#----------------------------------------------------------------------------
+
+# Gcc en général
+ifdef gcc
+
+# Tout ce qui est général
+header libnet.h : -lnet
+header enet/ : -lenet
+
+# Petites lib d'allegro
+header dime.h : -ldime
+header jgmod.h : -ljgmod
+header allegttf.h : -lalttf
+header aastr.h : -laastr
+header agup.h : -lagup
+header almp3.h : -lalmp3
+
+# Scripting
+header lua.h : -llua
+header lualib.h : -llualib
+
+# gcc dans un système de type unix en général (Linux, MacOSX)
+ifdef unix
+	# Multimedia
+	header allegro.h : `allegro-config --libs` : `allegro-config --cflags`
+	header SDL/SDL.h : `sdl-config --libs` : `sdl-config --cflags`
+
+	# X11/GUI
+	header gtk/ : `pkg-config --libs gtk+-2.0` : `pkg-config --cflags gtk+-2.0`
+	header glib/ : `pkg-config --libs glib+-2.0` : `pkg-config --cflags glib+-2.0`
+	header X11/ : -lX11
+	header fl/ : `fltk-config --ldflags` : `fltk-config --cflags`
+
+	# Autres
+	header math.h : -lm
+	header panel.h : -lpanel
+	header curses.h : -lcurses
+	header ncurses.h : -lncurses
+	header zlib.h : -lz
+	header libtar.h : -ltar
+	header readline/ : -lreadline
+
+	# Image
+	header png.h : -lpng
+	header readjpeg.h : -ljpeg
+	header readtiff.h : -ltiff
+	header readgif.h : -lgif
+
+	# Sound
+	header audiofile.h : `audiofile-config --libs` : `audiofile-config --cflags`
+endif
+
+# gcc sous linux
+ifdef linux
+	#contenu
+endif
+
+# gcc sous freebsd
+ifdef freebsd
+	#contenu
+endif
+
+# gcc dans un système darwin
+ifdef darwin
+	# contenu
+endif
+
+# gcc dans un système de type windows
+ifdef windows
+	header fl/ : -lfltk -mwindows -luuid -lole32 -lcomctl32 -lwsock32
+	header allegro.h : -lalleg
+endif
+
+endif # end if gcc
+
