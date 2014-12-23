@@ -9,12 +9,10 @@ Auteur:  Asher256
 Email:   contact@asher256.com
 URL:     http://asher256.tuxfamily.org/cmak
 
-======================================================================
 Licence
 ======================================================================
 cmak est distribué selon les termes de la GNU General Public Licence.
 
-======================================================================
 Qu'est-ce que cmak?
 ======================================================================
 Il nous arrive des fois de trouver sur internet des codes source ne 
@@ -27,7 +25,6 @@ rapide. Il peut aussi être très utile pour toute personne qui débute
 dans la programmation C/C++ et qui a besoin de créer plusieurs 
 Makefiles pour ses nombreux tests.
 
-======================================================================
 La détection de bibliothèques
 ======================================================================
 Il nous arrive aussi que ce même code source requiert plusieurs dépendances
@@ -37,8 +34,8 @@ des fonctions les plus intéressantes de CMAK est qu'il permet de détecter
 ces  dépendances via le fichier de configuration cmak.cfg, en parcourant
 récursivement tous les fichiers *.h inclus dans le code source. 
 
-* Premier exemple qui nous montre la détection de bibliothèques :
------------------------------------------------------------------
+Premier exemple qui nous montre la détection de bibliothèques :
+---------------------------------------------------------------
 Imaginons un code source qui contient le fichier: calcul.cpp
 	* Le fichier "calcul.cpp" contient:  #include "calcul.h"
 	* Le fichier "calcul.h" contient: #include "calcul_general.h"
@@ -52,8 +49,8 @@ La correspondances entre <math.h> et -lm se trouve dans le fichier "cmak.cfg".
 Lisez le contenu du fichier cmak.cfg pour savoir comment ajouter vos propres 
 correspondances.
 
-* Deuxième exemple:
--------------------
+Deuxième exemple:
+-----------------
 Imaginez que vous avez un code source qui contient:
 	* 10 fichiers C/C++ dans src/ et src_lib/
 	* 5 fichiers .h dans include/
@@ -76,7 +73,6 @@ Explications de quelques options:
 
 "-I include" permet de spécifier le chemin des fichiers include.
 
-======================================================================
 Comment installer cmak sous Linux?
 ======================================================================
 NB: Vous devez avoir le programme "make".
@@ -85,7 +81,6 @@ Entrez la commande dans votre terminal (en tant que root) :
 
 $ make install
 
-======================================================================
 Un petit résumé sur l'utilisation de cmak?
 ======================================================================
 Allez dans le répertoire ou sont situés les fichiers C/C++, puis 
