@@ -2,7 +2,6 @@ cmak, C/C++ Makefile Generator
 
 Auteur:  Asher256
 Email:   contact@asher256.com
-URL:     http://asher256.tuxfamily.org/cmak
 
 Licence
 ======================================================================
