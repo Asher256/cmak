@@ -2,9 +2,9 @@
 #!/usr/local/bin/perl -w
 #
 # Auteur: Asher256
-# Email:  contact@asher256.com
+# Email:  asher256@gmail.com
 # 
-# Dernière version: http://asher256.tuxfamily.org/cmak
+# Dernière version: https://github.com/Asher256/cmak
 #
 # Licence :
 #==========

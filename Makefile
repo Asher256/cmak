@@ -7,7 +7,7 @@
 #     - rm
 #     - rmdir
 #
-# Auteur: Asher256 <contact@asher256.com>
+# Auteur: Asher256 <asher256@gmail.com>
 #
 
 PREFIX=/usr/local
